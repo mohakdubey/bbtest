@@ -1,0 +1,8 @@
+@font-face
+{
+font-family: minimalist;
+src: url('MetaSerifSc-Bold.pfb'),
+}
+body {
+	font-family: arial;
+}

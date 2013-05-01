@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Top News India</title>
+		<link rel="stylesheet" href="themes/redlight.min.css" />
+		<link rel="stylesheet" href="jquery.mobile.structure-1.2.0.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery-1.8.2.min.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<script src="appsc.js"></script>
+		<script src="local:///chrome/webworks.js" type="text/javascript"></script>
+		<script>
+      function ready() {
+         var ele = document.createElement("div");
+         ele.innerHTML = "uuid: " + blackberry.identity.uuid;
+         document.documentElement.appendChild(ele);
+      }   
+      window.addEventListener("load", function(e) {
+         document.addEventListener("webworksready", ready);
+      }, false);
+   </script>
+	</head>
+	<style>
+@font-face
+{
+font-family: hey;
+src: url('metaserifscbold.ttf');
+}
+
+body
+{
+font-family:hey,Courier New;
+}
+	</style>
+	<body>
+		<div data-role="page" data-theme="a" id="home">
+			<div data-role="header" data-position="inline">
+				<h1>Top News India</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#toi">Times Of India</a></li>
+				<li><a href="index.html#cnn">Cnn-Ibn</a></li>
+				<li><a href="index.html#ndtv">NDTV</a></li>
+				<li><a href="index.html#hindu">Hindustan Times</a></li>
+				<li><a href="index.html#dna">DNA</a></li>
+				<li><a href="index.html#dc">The Deccan Chronicle</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			
+			</div>
+		</div>
+<!-- Times of india -->
+				<div data-role="page" data-theme="a" id="toi">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Times Of India</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="65" onclick="toijson(this)" class="toi">Top Stories</a></li>
+				<li><a href="index.html#title" id="16" onclick="toijson(this)" class="toi">India</a></li>
+				<li><a href="index.html#title" id="17" onclick="toijson(this)" class="toi">World</a></li>
+				<li><a href="index.html#title" id="19" onclick="toijson(this)" class="toi">Business</a></li>
+				<li><a href="index.html#title" id="21" onclick="toijson(this)" class="toi">Sports</a></li>
+				<li><a href="index.html#title" id="23" onclick="toijson(this)" class="toi">Technology</a></li>
+				<li><a href="index.html#title" id="28" onclick="toijson(this)" class="toi">Entertainment</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+<!-- Cnn Ibn -->
+						<div data-role="page" data-theme="a" id="cnn">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Cnn-Ibn</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="top" onclick="cnnibnjson(this)" >Top Stories</a></li>
+				<li><a href="index.html#title" id="india" onclick="cnnibnjson(this)" >India</a></li>
+				<li><a href="index.html#title" id="world" onclick="cnnibnjson(this)" >World</a></li>
+				<li><a href="index.html#title" id="business" onclick="cnnibnjson(this)" >Business</a></li>
+				<li><a href="index.html#title" id="sports" onclick="cnnibnjson(this)" >Sports</a></li>
+				<li><a href="index.html#title" id="tech" onclick="cnnibnjson(this)" >Technology</a></li>
+				<li><a href="index.html#title" id="moviesnews" onclick="cnnibnjson(this)" >Entertainment</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+<!-- NDTV -->
+
+						<div data-role="page" data-theme="a" id="ndtv">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Ndtv</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="NdtvNews-TopStories" onclick="ndtvjson(this)" >Top Stories</a></li>
+				<li><a href="index.html#title" id="Lsgd" onclick="ndtvjson(this)" >India</a></li>
+				<li><a href="index.html#title" id="TqgX" onclick="ndtvjson(this)" >World</a></li>
+				<li><a href="index.html#title" id="Business" onclick="ndtvjson(this)" >Business</a></li>
+				<li><a href="index.html#title" id="Sports" onclick="ndtvjson(this)" >Sports</a></li>
+				<li><a href="index.html#title" id="Tech" onclick="ndtvjson(this)" >Technology</a></li>
+				<li><a href="index.html#title" id="Ent" onclick="ndtvjson(this)" >Entertainment</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+<!-- Hindustan Times-->
+
+						<div data-role="page" data-theme="a" id="hindu">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Hindustan Times</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="HT-HomePage-TopStories" onclick="hindujson(this)" >Top Stories</a></li>
+				<li><a href="index.html#title" id="HT-IndiaSectionPage-Topstories" onclick="hindujson(this)" >India</a></li>
+				<li><a href="index.html#title" id="HT-WorldSectionPage-Topstories" onclick="hindujson(this)" >World</a></li>
+				<li><a href="index.html#title" id="HT-BusinessSectionpage-TopStories" onclick="hindujson(this)" >Business</a></li>
+				<li><a href="index.html#title" id="HT-SportsSection-Topstories" onclick="hindujson(this)" >Sports</a></li>
+				<li><a href="index.html#title" id="HT-TechnologyTrends" onclick="hindujson(this)" >Technology</a></li>
+				<li><a href="index.html#title" id="HT-HomePage-Entertainment" onclick="hindujson(this)" >Entertainment</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+<!-- DNA-->
+
+						<div data-role="page" data-theme="a" id="dna">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>DNA</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="rss_topnews" onclick="dnajson(this)" >Top Stories</a></li>
+				<li><a href="index.html#title" id="rss,catid-2" onclick="dnajson(this)" >India</a></li>
+				<li><a href="index.html#title" id="rss,catid-9" onclick="dnajson(this)" >World</a></li>
+				<li><a href="index.html#title" id="rss,catid-4" onclick="dnajson(this)" >Business</a></li>
+				<li><a href="index.html#title" id="rss,catid-6" onclick="dnajson(this)" >Sports</a></li>
+				<li><a href="index.html#title" id="rss,catid-5" onclick="dnajson(this)" >Technology</a></li>
+				<li><a href="index.html#title" id="rss,catid-7" onclick="dnajson(this)" >Entertainment</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+
+<!-- Deccan Chronicle-->
+
+						<div data-role="page" data-theme="a" id="dc">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Deccan Chronicle</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview">
+				<li><a href="index.html#title" id="world" onclick="dcjson(this)" >World</a></li>
+				<li><a href="index.html#title" id="business" onclick="dcjson(this)" >Business</a></li>
+				<li><a href="index.html#title" id="sport" onclick="dcjson(this)" >Sports</a></li>
+				<li><a href="index.html#title" id="SCI-TECH" onclick="dcjson(this)" >Sci/Tech</a></li>
+				<li><a href="index.html#title" id="lifestyle" onclick="dcjson(this)" >Lifestyle</a></li>
+				<li><a href="index.html#title" id="Showbiz" onclick="dcjson(this)" >Showbiz</a></li>
+				<li><a href="index.html#title" id="Op-ed" onclick="dcjson(this)" >Editorial</a></li>
+			</ul>
+			</div>
+		</br></br></br></br>
+			<table id="table"></table>
+			</div>
+		</div>
+
+
+
+						<div data-role="page" data-theme="a" id="title">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Top News (India)</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+			<ul data-role="listview" id="titlelist">
+			</ul>
+			</div>
+		</br></br></br></br>
+			</div>
+		</div>
+
+
+			<div data-role="page" data-theme="a" id="desc">
+			<div data-role="header" data-position="inline">
+				<a href="#home" data-role="button" data-rel="back">Back</a>
+				<h1>Top News (India)</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div class="content-primary">
+					
+			<div id="fullpost"></div>
+			</ul>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
